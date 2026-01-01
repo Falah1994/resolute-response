@@ -1,0 +1,195 @@
+/* CSS BY (Falah Muhammad) */
+
+/* IMPORTED FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ROOT VARIABLES */
+:root {
+  --midnight-blue: #1F2A44;
+  --periwinkle: #6971b9;
+  --true-white: #ffffff;
+  --linen: #F8F4EC;
+  --dark-charcoal: #2B2B2B;
+  --soft-white: #FAF9F6;
+}
+
+/* GLOBAL STYLES */
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #FFFFFF; /* Set to pure white */
+  color: var(--dark-charcoal);
+  line-height: 1.8;
+  text-align: center;
+}
+
+img {
+  max-width: 200%;
+  height: auto;
+  display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    background-color: #FFFFFF; /* Set to pure white */
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 16px;
+  color: var(--dark-charcoal); 
+}
+h1 { font-size: 50px; }
+h2 { font-size: 40px; }
+h3 { font-size: 38px; }
+
+
+
+#about p, #gallery p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 32px;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-color: #6971b9;
+    margin: 32px auto;
+    width: 100%;
+}
+
+/* HEADER */
+body> header {
+  background-color: var(--midnight-blue);
+  padding: 24px 16px;
+}
+header .logo {
+    max-width: 250px;
+    margin: 0 auto 8px;
+}
+header h1, header p {
+  color: var(--soft-white); /* Light text for dark header */
+}
+header p {
+    color: #6971b9;
+    font-size: 20px;
+}
+
+/* MAIN NAVIGATION */
+.main-nav {
+  background-color: var(--periwinkle);
+  padding: 1rem 2rem;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  list-style: none;
+}
+.main-nav a {
+    color: var(--dark-charcoal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* CONTENT SECTIONS */
+section {
+    padding: 32px 0;
+}
+
+/* OFFERINGS SECTION */
+.offer-grid {
+  display: grid;
+  gap: 24px;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.offer-grid article,
+.offer-full-width {
+  background-color: #F8F4EC;
+  color: #2B2B2B;
+  padding: 32px;
+  border-radius: 8px;
+}
+.offer-grid h3,
+.offer-full-width h3 {
+    color: #2B2B2B; /* Light text for green boxes */
+}
+.offer-full-width ul {
+    list-style-position: inside;
+    padding-left: 16px;
+    margin: 16px 0;
+    text-align: left;
+}
+
+/* GALLERY SECTION */
+.gallery-grid {
+  display: grid;
+  gap: 16px;
+}
+.gallery-grid figure {
+  background: var(--linen);
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gallery-grid figcaption {
+    padding: 16px;
+}
+.button {
+    display: inline-block;
+    background-color: var(--olive-green);
+    color: var(--soft-white);
+    padding: 12px 32px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 32px;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--midnight-blue);
+  color: var(--soft-white);
+  padding: 48px 16px;
+  margin-top: 32px;
+}
+footer a {
+    color: var(--periwinkle);
+}
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin-top: 16px;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 600px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .offer-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1200px) {
+  .gallery-grid { grid-template-columns: repeat(5, 1fr); }
+}
